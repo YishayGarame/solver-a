@@ -129,7 +129,19 @@ solver::ComplexVariable &solver::operator+(ComplexVariable &x, ComplexVariable &
     x.im = x.im = y.im;
     return x;
 }
+solver::ComplexVariable &solver::operator+(ComplexVariable &x, std::complex<double> y)
+{
+    // x.re = x.re + y.real;
+    // x.im = x.im = y.imag;
+    return x;
+}
 
+solver::ComplexVariable &solver::operator+(std::complex<double> y, ComplexVariable &x)
+{
+    // x.re = x.re + y.real;
+    // x.im = x.im = y.imag;
+    return x;
+}
 solver::ComplexVariable &solver::operator+(ComplexVariable &x, double y)
 {
     x.re = x.re + y;
@@ -147,6 +159,19 @@ solver::ComplexVariable &solver::operator-(ComplexVariable &x, ComplexVariable &
 {
     x.re = x.re - y.re;
     x.im = x.im = y.im;
+    return x;
+}
+solver::ComplexVariable &operator-(ComplexVariable &x, std::complex<double> y)
+{
+    // x.re = x.re + y.real;
+    // x.im = x.im = y.imag;
+    return x;
+}
+
+solver::ComplexVariable &operator-(std::complex<double> y, ComplexVariable &x)
+{
+    // x.re = x.re + y.real;
+    // x.im = x.im = y.imag;
     return x;
 }
 solver::ComplexVariable &solver::operator-(ComplexVariable &x, double y)
