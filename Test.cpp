@@ -77,6 +77,7 @@ TEST_CASE("This test case check RealVariable")
 TEST_CASE("This test case check ComplexVariable")
 {
     ComplexVariable x;
+
     CHECK((solve((x ^ 2) == -25) == std::complex<double>(0, 5) || solve((x ^ 2) == -25) == std::complex<double>(0, -5)));
     CHECK((solve((x ^ 2) == -4) == std::complex<double>(0, 2) || solve((x ^ 2) == -4) == std::complex<double>(0, -2)));
     CHECK((solve((x ^ 2) == -64) == std::complex<double>(0, 8) || solve((x ^ 2) == -64) == std::complex<double>(0, -8)));
